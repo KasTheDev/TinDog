@@ -14,56 +14,40 @@ function renderProfile(){
     document.getElementById('match-card').innerHTML = matches.getMatchHtml()
 }
 
-function next(e){
-    if(profileArray.length > 0){
-        if(e.target.id === 'crossButton'){
-            matches.hasBeenSwiped = true
-            document.getElementById('nopeBadge').style.display = 'flex'
-            setTimeout(()=> {
-            matches = getNewProfile()
-            document.getElementById('nopeBadge').style.display = 'none'
-            renderProfile()
-            }, 2000)
+const updateMatches = (statusKey, badgeId, callbackFn = renderProfile) => {
+    matches[statusKey] = true;
+    document.getElementById(badgeId).style.display = "flex";
+    setTimeout(() => {
+        matches = getNewProfile();
+        document.getElementById(badgeId).style.display = "none";
+        callbackFn();
+    }, 2000);
+};
+
+const next = (e) => {
+    const targetId = e.target.id;
+    if (profileArray.length > 0) {
+        if (targetId === "crossButton") {
+            updateMatches("hasBeenSwiped", "nopeBadge");
+        } else if (targetId === "heartButton") {
+            updateMatches("hasBeenLiked", "likeBadge");
         }
-        else if(e.target.id === 'heartButton'){
-            matches.hasBeenLiked = true
-            document.getElementById('likeBadge').style.display = 'flex'
-            setTimeout(()=> {
-            matches = getNewProfile()
-            document.getElementById('likeBadge').style.display = 'none'
-            renderProfile()
-            }, 2000)   
-        }
-    }
-    else if(profileArray.length === 0){
-        if(e.target.id === 'crossButton'){
-            matches.hasBeenSwiped = true
-            document.getElementById('nopeBadge').style.display = 'flex'
-            setTimeout(()=> {
-            document.getElementById('nopeBadge').style.display = 'none'
-            }, 2000)
-            outOfMatches()
-        }
-        else if(e.target.id === 'heartButton'){
-            matches.hasBeenSwiped = true
-            document.getElementById('likeBadge').style.display = 'flex'
-            setTimeout(()=> {
-            document.getElementById('likeBadge').style.display = 'none'
-            }, 2000)
-            outOfMatches()   
+    } else if (profileArray.length === 0) {
+        if (targetId === "crossButton") {
+            updateMatches("hasBeenSwiped", "nopeBadge", outOfMatches);
+        } else if (targetId === "heartButton") {
+            updateMatches("hasBeenSwiped", "likeBadge", outOfMatches);
         }
     }
-}
+};
 
 function outOfMatches(){
-        setTimeout(()=>{
         document.getElementById('profile-display').innerHTML = `
                 <div class="out-of-matches">
                     <h2>Don't Worry!</h2> 
                     <h3>You'll find love eventually!</h3>
                 </div>
                 `
-        }, 2000)
 }
 
 
