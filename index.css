@@ -1,0 +1,129 @@
+main{
+    width: 480px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Poppins', sans-serif;  
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.25em;
+    padding-bottom: 1.25em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+.icon{
+    width: 8%;
+    height: 8%;
+}
+
+.logo {
+    width: 20%;
+}
+
+.avatar{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.dog-profile{
+    position: relative;
+}
+
+.badge{
+    position: absolute;
+    width: 50%;
+    top: 10%;
+    left: 6%;
+    transform: rotate(-30deg);
+    z-index: 100;
+}
+.match-card{
+    position: relative;
+}
+
+.text{
+    font-family: 'Poppins', sans-serif;
+    margin-left: .75rem;
+    margin-bottom: 1rem;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.info{
+    font-size: 2rem;
+    font-weight: 600;
+    color: #F8F8F8;
+}
+
+.info, 
+p{
+    text-shadow: black 1px 1px 1px;
+}
+
+p{
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #B7B7B7;
+}
+.react-btn{
+    display: flex;
+    gap: 1.5em;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.button{
+    border: none;
+    border-radius: 100%;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    width: 15%;
+    aspect-ratio: 1;
+    font-weight: bolder;
+    background-color: white;
+}
+
+
+.heart-button{
+    box-shadow: 0px 10px 20px #8ca29c;
+}
+
+.cross-button{
+    box-shadow: 0px 10px 20px #987b7b;
+}
+
+.cross-button:hover{
+    background-color: #FFE7EF;
+}
+
+.heart-button:hover{
+    background-color: #DBFFF4;
+}
+.like{
+    display: none;
+}
+
+.nope{
+    display: none;
+}
+
+.out-of-matches{
+    color: white;
+    text-shadow: black 1px 1px 1px;
+    background-image: url("images/sad-dog.jpg");
+    background-size: cover;
+    width: 480px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+

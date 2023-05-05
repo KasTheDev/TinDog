@@ -1,0 +1,44 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="index.css">
+                <!-- Google Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    </head>
+    
+    <body>
+        <main>
+            <!-- HEADER -->
+            <header>
+                <img src="images/icon-profile.png" class="icon profile">
+                <img src="images/logo.png" class="logo">
+                <img src="images/icon-chat.png" class="icon chat">
+            </header>
+            
+            <section id='profile-display' class='profile-display'> 
+            
+            <div id = "dog-profile" class="dog-profile">
+                <img src = "./images/badge-like.png" alt = "like bagde" class ="badge like" id = "likeBadge">
+                <img src = "./images/badge-nope.png" alt = "nope bagde" class ="badge nope" id = "nopeBadge">
+                
+                <div id="match-card"vclass="match-card">
+                    
+                </div>
+            </div>
+             <!-- Buttons -->
+            <div class= "react-btn" id= "react-btn">
+                <button class = "button cross-button" >
+                    <img src = "images/icon-cross.png" id = "crossButton" class = "button-image cross" alt = "cross icon, nope button">
+                </button>
+                <button class = "button heart-button" >
+                    <img src = "images/icon-heart.png" id = "heartButton" class = "button-image heart" alt = "heart icon, like button">
+                </button>
+            </div>
+            
+            </section>
+
+        </main>
+        <script src="/index.js" type="module"></script>
+    </body>
+</html>
