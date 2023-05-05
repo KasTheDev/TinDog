@@ -41,16 +41,16 @@ function next(e){
             document.getElementById('nopeBadge').style.display = 'flex'
             setTimeout(()=> {
             document.getElementById('nopeBadge').style.display = 'none'
-            outOfMatches()
             }, 2000)
+            outOfMatches()
         }
         else if(e.target.id === 'heartButton'){
             matches.hasBeenSwiped = true
             document.getElementById('likeBadge').style.display = 'flex'
             setTimeout(()=> {
             document.getElementById('likeBadge').style.display = 'none'
-            outOfMatches()
-            }, 2000)   
+            }, 2000)
+            outOfMatches()   
         }
     }
 }

@@ -118,6 +118,7 @@ p{
     text-shadow: black 1px 1px 1px;
     background-image: url("images/sad-dog.jpg");
     background-size: cover;
+    border-radius: 15px;
     width: 480px;
     height: 500px;
     display: flex;
