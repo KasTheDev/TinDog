@@ -1,6 +1,5 @@
 import dogs from "./data.js" 
 import Dog from "./Dog.js"
-// Remember to import the data and Dog class!
 
 
 let profileArray = ["rex", "bella","teddy", "rhea"]
@@ -50,9 +49,7 @@ function outOfMatches(){
                 `
 }
 
-
 document.getElementById('react-btn').addEventListener('click', next)
 
 let matches = getNewProfile()
 renderProfile()
-

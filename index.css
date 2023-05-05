@@ -10,11 +10,9 @@ main{
 header{
     display: flex;
     justify-content: space-between;
-    padding-top: 1.25em;
-    padding-bottom: 1.25em;
-    padding-left: 1em;
-    padding-right: 1em;
+    padding: 1.25em 1em 1.25em 1em;
 }
+
 .icon{
     width: 8%;
     height: 8%;
@@ -71,6 +69,7 @@ p{
     font-weight: 400;
     color: #B7B7B7;
 }
+
 .react-btn{
     display: flex;
     gap: 1.5em;
@@ -78,6 +77,7 @@ p{
     justify-content: center;
     align-items: center;
 }
+
 .button{
     border: none;
     border-radius: 100%;
@@ -88,7 +88,6 @@ p{
     font-weight: bolder;
     background-color: white;
 }
-
 
 .heart-button{
     box-shadow: 0px 10px 20px #8ca29c;
@@ -105,10 +104,8 @@ p{
 .heart-button:hover{
     background-color: #DBFFF4;
 }
-.like{
-    display: none;
-}
 
+.like,
 .nope{
     display: none;
 }
@@ -119,7 +116,6 @@ p{
     background-image: url("images/sad-dog.jpg");
     background-size: cover;
     border-radius: 15px;
-    width: 480px;
     height: 500px;
     display: flex;
     flex-direction: column;
